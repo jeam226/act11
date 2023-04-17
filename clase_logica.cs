@@ -9,28 +9,28 @@ namespace activitat11
     internal class clase_logica
     {
         Form2 form2 = new Form2();
-
-        private void Afegir_Butons()
+        public void Afegir_Butons()
         {
-            int posX = 0;
-            int posY = 0;
-            int c = 0;
-            int altura = 20;
-            int amplada = 20;
+            int posX = 0;       // posicio X
+            int posY = 0;       // posicio Y
+            int altura = 20;    // Altura buto
+            int amplada = 20;   // ampldada buto
 
-            System.Windows.Forms.Button[] buttons = new System.Windows.Forms.Button[28];
+            System.Windows.Forms.Button[] buttons = new System.Windows.Forms.Button[26];  // cream array
 
-            for (int i = 0; i < (buttons.Length); i++)
+            for (int i = 0; i < 26; i++)
             {
-                buttons[i] = new System.Windows.Forms.Button();
+                buttons[i] = new System.Windows.Forms.Button(); // en el espai del array cream els botons
             }
 
-            while (c < (buttons.Length -2))
+            int c = 0;          // contador
+
+            while (c < 26)
             {
                 buttons[c].Tag = c + 1;
                 buttons[c].Width = amplada;
                 buttons[c].Height = altura;
-                if (c == (buttons.Length -2) / 2)
+                if (c == 13)
                 {
                     posX = 0;
                     posY = altura;
@@ -48,7 +48,8 @@ namespace activitat11
         public void Click_Boto(object sender, System.EventArgs e)
         {
             Button button = (Button)sender;
-            
+            string lletra = button.Text;
+            form2.textBox.Text += lletra;
         }
 
 

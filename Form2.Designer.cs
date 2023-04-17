@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label2 = new Label();
             textBox1 = new TextBox();
             SuspendLayout();
             // 
@@ -39,13 +40,22 @@
             panel1.Size = new Size(336, 160);
             panel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(12, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 25);
+            label2.TabIndex = 2;
+            label2.Text = "Worle";
+            // 
             // textBox1
             // 
-            textBox1.Location = new Point(135, 259);
-            textBox1.MaxLength = 5;
+            textBox1.Location = new Point(128, 259);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            textBox1.TabIndex = 3;
             // 
             // Form2
             // 
@@ -53,9 +63,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(360, 460);
             Controls.Add(textBox1);
+            Controls.Add(label2);
             Controls.Add(panel1);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -63,6 +75,7 @@
         #endregion
 
         private Panel panel1;
+        private Label label2;
         private TextBox textBox1;
     }
 }

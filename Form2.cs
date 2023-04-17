@@ -12,7 +12,7 @@ namespace activitat11
 {
     public partial class Form2 : Form
     {
-        clase_logica logica = new clase_logica();
+
         public Form2()
         {
             InitializeComponent();
@@ -23,5 +23,18 @@ namespace activitat11
             get { return panel1; }
             set { panel1 = value; }
         }
+
+        public TextBox textBox
+        {
+            get { return textBox1; }
+            set { textBox1 = value; }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            clase_logica logica = new clase_logica();
+            logica.Afegir_Butons();
+        }
+
     }
 }

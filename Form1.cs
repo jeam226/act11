@@ -19,8 +19,8 @@ namespace activitat11
             {
                 paraula_a_trobar = textBox31.Text;
                 this.Hide();
-                Form1 form1 = new Form1();
-                form1.Show();
+                Form2 form2 = new Form2();
+                form2.Show();
             }
         }
 
